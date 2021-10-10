@@ -86,10 +86,18 @@ def ex6():
         print("Списки не пересекаются")
 
 
+def pascal_triangle(rows):
+    row = [1]
+    for i in range(rows):
+        print(row)
+        row = [sum(x) for x in zip([0] + row, row + [0])]
+
+
 def main():
-    ex4()
-    ex5()
-    ex6()
+    #ex4()
+    #ex5()
+    #ex6()
+    pascal_triangle(10)
 
 
 if __name__ == '__main__':
